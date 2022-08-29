@@ -39,6 +39,35 @@ li {
     border: solid darkslateblue;
 }
 
+.barranav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.barranav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+}
+
+.barranav ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.barranav ul li:hover::before {
+    width: 100%;}
+
 a {
     text-decoration: none;
     padding: 15px;
