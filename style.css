@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background:
+        linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+        linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color: #708090;
+    background-size: 64px 128px;
+
+    font-family: 'Times New Roman';
+}
+
+/* header*/
+.title {
+    padding: 15px;
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+}
+
+.lista {
+    display: flex;
+    border: solid lightblue;
+    justify-content: center;
+    padding: 20px;
+    gap: 22px;
+    font-size: 20px;
+    position: sticky;
+
+}
+
+li {
+    list-style-type: none;
+    background-color: black;
+    border: solid darkslateblue;
+}
+
+a {
+    text-decoration: none;
+    padding: 15px;
+    color: beige;
+}
+
+/* MAIN*/
+.container {
+    background-color: grey;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+
+
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+
+
+}
+
+.containerproducto {
+    height: 1000px;
+    padding: 100px;
+    margin: 10px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap: 40px 10px;
+    overflow: hidden;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "carrito1 descripción foto1"
+        "carrito2 descripción2 foto2"
+        "carrito3 descripción3 foto3"
+        "carrito4 descripción4 foto4"
+        "carrito5 descripción5 foto5";
+    width: 80%;
+}
+
+.descripción,
+.descripción2,
+.descripción3,
+.descripción4,
+.descripción5 {
+    font-size: 30px;
+    color: beige;
+    margin: 10px;
+    overflow: auto;
+}
+
+.descripción {
+    grid-area: descripción;
+}
+
+.descripción2 {
+    grid-area: descripción2;
+}
+
+.descripción3 {
+    grid-area: descripción3;
+}
+
+.descripción4 {
+    grid-area: descripción4;
+}
+
+.descripción5 {
+    grid-area: descripción5;
+}
+
+.carrito1 {
+    grid-area: carrito1;
+    background-color: blue;
+}
+
+.carrito2 {
+    grid-area: carrito2;
+    background-color: blue;
+}
+
+.carrito3 {
+    grid-area: carrito3;
+    background-color: blue;
+}
+
+.carrito4 {
+    grid-area: carrito4;
+    background-color: blue;
+}
+
+.carrito5 {
+    grid-area: carrito5;
+    background-color: blue;
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+
+/* FOOTER*/
+.footerclass {
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    border: solid lightblue;
+    padding: 20px;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .headerclass .lista {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .container {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+
+    }
+
+    .containerproducto {
+        width: 500px;
+        gap: 30px;
+        grid-template-columns: 5% 65% 30%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+
+
+
+    }
+
+    .footerclass {
+        padding: 5px;
+        gap: 5px;
+    }
+
+
+
+}
+
+.footerclass {
+    gap: 5px;
+    flex-wrap: wrap;
+}
